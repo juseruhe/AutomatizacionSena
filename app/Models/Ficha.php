@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Ficha extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'id';
+    protected $table = 'fichas';
+    protected $fillable = [
+        'jornada','caracter','estado'
+    ];
+
 }

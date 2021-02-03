@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Ficha;
 use Illuminate\Database\Seeder;
+use Database\Seeders\FichaSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +16,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $this->call(FichaSeeder::class);
     }
 }

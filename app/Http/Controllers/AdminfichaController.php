@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Adminficha;
+use App\Models\Ficha;
 
 class AdminfichaController extends Controller
 {
     //
     public function index(){
 
-        $adminfichas=Adminficha::all();
+        $adminfichas=Ficha::all();
         return view('admindficha.index');
     }
 
