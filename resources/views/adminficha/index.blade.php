@@ -1,3 +1,3 @@
-<?php
-
-    @extends('')
+    @extends('layouts.app')
+    @section('content')
+    @endsection

@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('adminficha',[AdminfichaController::class,'index'])->name('.index');
+Route::get('adminficha',[AdminfichaController::class,'index'])->name('adminficha.index');
 Route::get('adminficha/create',[AdminfichaController::class,'create'])->name('adminficha.create');
 Route::post('adminficha',[AdminfichaController::class,'store'])->name('adminficha.store');
 Route::get('adminficha/{id}',[AdminfichaController::class,'show'])->name('adminficha.find');

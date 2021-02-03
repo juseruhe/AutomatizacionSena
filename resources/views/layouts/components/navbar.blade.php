@@ -1,10 +1,10 @@
 <nav class="navbar has-background-link" role="navigation" aria-label="main navigation">
- 
+
 
 
  <!--  Ciudades -->
 
-   
+
     <div class="columns">
 
      <div class="column is-2  ">
@@ -17,17 +17,17 @@
         </a>
 
         <div class="navbar-dropdown has-background-link">
-          <a class="navbar-item has-text-white "  href={{route('ciudad.index')}}>
+          <a class="navbar-item has-text-white "  href=#>
             Mostrar Ciudades
           </a>
-          <a class="navbar-item has-text-white " href={{route('ciudad.create')}}>
+          <a class="navbar-item has-text-white " href=#>
             Crear Ciudad
           </a>
         </div>
       </div>
-   
+
       </div>
-    
+
   <!-- Propietarios  -->
 
   <div class="column is-2  ">
@@ -38,10 +38,10 @@
         </a>
 
         <div class="navbar-dropdown has-background-link">
-          <a class="navbar-item has-text-white " href={{route('propietario.index')}}>
+          <a class="navbar-item has-text-white " href=#>
             Mostrar Propietarios
           </a>
-          <a class="navbar-item has-text-white " href={{route('propietario.create')}}>
+          <a class="navbar-item has-text-white " href=#>
             Crear Propietario
           </a>
         </div>
@@ -49,7 +49,7 @@
       </div>
 
 
-   
+
   <!--  Conductores  -->
 
        <div class="column is-2">
@@ -60,17 +60,17 @@
         </a>
 
         <div class="navbar-dropdown has-background-link">
-          <a class="navbar-item has-text-white " href={{route('conductor.index')}}>
+          <a class="navbar-item has-text-white " href=#>
             Mostrar Conductores
           </a>
-          <a class="navbar-item has-text-white " href={{route('conductor.create')}}>
+          <a class="navbar-item has-text-white " href=#>
             Crear Conductor
           </a>
         </div>
       </div>
       </div>
 
-   
+
   <!--  Colores -->
     <div class="column is-2">
       <div class="navbar-item has-dropdown is-hoverable">
@@ -80,18 +80,18 @@
         </a>
 
         <div class="navbar-dropdown has-background-link">
-          <a class="navbar-item has-text-white " href={{route('color.index')}}>
-          
+          <a class="navbar-item has-text-white " href=#>
+
             Mostrar Colores
           </a>
-          <a class="navbar-item has-text-white " href={{route('color.create')}}>
+          <a class="navbar-item has-text-white " href=#>
             Crear Color
           </a>
         </div>
       </div>
       </div>
 
-    
+
   <!--  Marcas -->
     <div class="column is-1">
       <div class="navbar-item has-dropdown is-hoverable has-background-link">
@@ -101,10 +101,10 @@
         </a>
 
         <div class="navbar-dropdown has-background-link">
-          <a class="navbar-item has-text-white" href={{route('marca.index')}}>
+          <a class="navbar-item has-text-white" href=#>
             Mostrar Marcas
           </a>
-          <a class="navbar-item has-text-white" href={{route('marca.create')}}>
+          <a class="navbar-item has-text-white" href=#>
             Crear Marca
           </a>
         </div>
@@ -113,27 +113,27 @@
 
 
 
-    
+
   <!--  Tipo de Vehículos -->
     <div class="column is-1">
       <div class="navbar-item has-dropdown is-hoverable has-background-link">
         <a class="navbar-link has-text-white " >
         <i class="fas fa-caravan"></i>
-          Tipo de Vehículos 
+          Tipo de Vehículos
         </a>
 
         <div class="navbar-dropdown has-background-link">
-          <a class="navbar-item has-text-white " href={{route('tipo_vehiculo.index')}}>
+          <a class="navbar-item has-text-white " href=#>
             Mostrar Tipo de Vehículos
           </a>
-          <a class="navbar-item has-text-white" href={{route('tipo_vehiculo.create')}}>
+          <a class="navbar-item has-text-white" href=#>
             Crear Tipo de Vehículos
           </a>
         </div>
       </div>
       </div>
 
-    
+
   <!--  Vehículos -->
     <div class="column is-2">
       <div class="navbar-item has-dropdown is-hoverable has-background-link">
@@ -143,15 +143,15 @@
         </a>
 
         <div class="navbar-dropdown has-background-link">
-          <a class="navbar-item has-text-white" href={{route('vehiculo.index')}}>
+          <a class="navbar-item has-text-white" href=#>
             Mostrar Vehículos
           </a>
-          <a class="navbar-item has-text-white " href={{route('vehiculo.create')}}>
+          <a class="navbar-item has-text-white " href=#>
             Crear Vehículo
           </a>
         </div>
       </div>
-   
+
 
       </div>
 
@@ -160,9 +160,9 @@
 
 
 
-     
+
 
       </div>
-      
+
 </nav>
 

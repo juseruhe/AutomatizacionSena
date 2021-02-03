@@ -12,7 +12,7 @@ class AdminfichaController extends Controller
     public function index(){
 
         $adminfichas=Ficha::all();
-        return view('admindficha.index');
+        return view('adminficha.index');
     }
 
     public function create(){
