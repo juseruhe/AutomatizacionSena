@@ -15,6 +15,7 @@ class FichaSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('fichas')->insert(['jornada'=>'mañana','caracter'=>'18014785-G1','estado'=>'activado']);
+        DB::table('fichas')->insert
+        (['jornada'=>'mañana','caracter'=>'18014785-G1','estado'=>'activado']);
     }
 }

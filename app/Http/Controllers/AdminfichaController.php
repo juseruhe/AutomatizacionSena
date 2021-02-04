@@ -12,15 +12,16 @@ class AdminfichaController extends Controller
     public function index(){
 
         $adminfichas=Ficha::all();
-        return view('adminficha.index');
+        return view('adminficha.index',compact('adminfichas'));
     }
 
     public function create(){
         return view ( 'adminficha.create');
     }
+
 // registrar nueva ficha
     public function store(Request $request){
-        $adminfichas=Adminficha::create($request->all());
+        $adminfichas=Ficha::create($request->all());
         return redirect()->route('adminficha.index')->with([
             'message'=>'Se ha creado correctamente la ficha',
             'type'=>'success'
