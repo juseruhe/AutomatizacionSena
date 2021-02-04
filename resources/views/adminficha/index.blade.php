@@ -49,8 +49,8 @@
 
                                 @method('DELETE')
 
-                                <a href="#" class="button is-info">Actualizar</a>
-                                <a href="#" class="button is-warning">Desactivar</a>
+                                <a href="{{route('adminficha.edit',$adminficha->id)}}" class="button is-info">Actualizar</a>
+                                <a href="{{route('adminficha.deactivate',$adminficha->id)}}" class="button is-warning">Desactivar</a>
 {{--                                <button class="button is-danger">Eliminar</button>--}}
                             </form>
                         </td>
