@@ -12,7 +12,7 @@ class Ficha extends Model
     protected $primaryKey = 'id';
     protected $table = 'fichas';
     protected $fillable = [
-        'jornada','caracter','estado'
+        'jornada','nombre','id_ficha_de_caracterizacion','programa_de_formacion','estado'
     ];
 
 }

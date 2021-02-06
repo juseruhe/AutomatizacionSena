@@ -16,6 +16,12 @@ class FichaSeeder extends Seeder
     {
         //
         DB::table('fichas')->insert
-        (['jornada'=>'mañana','caracter'=>'18014785-G1','estado'=>'activado']);
+        (['jornada'=>'mañana',
+          'nombre'=>'Analisis y desarrollo de sistemas',
+          'id_ficha_de_caracterizacion'=>'18014785-G1',
+          'programa_de_formacion'=>'Tecnologo',
+          'estado'=>'activado']);
+
+
     }
 }

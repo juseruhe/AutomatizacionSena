@@ -16,7 +16,9 @@ class CreateFichasTable extends Migration
         Schema::create('fichas', function (Blueprint $table) {
             $table->id();
             $table->String('jornada');
-            $table->String('caracter');
+            $table->String('nombre');
+            $table->String('id_ficha_de_caracterizacion');
+            $table->String('programa_de_formacion');
             $table->String('estado');
             $table->timestamps();
 
