@@ -71,7 +71,12 @@ class AdminfichaController extends Controller
         ]);
     }
 
+public function show(){
 
+    $adminfichas = ficha::select('*')->orderBy('jornada', 'asc')->get();
+
+    return view('adminficha.journey',compact('adminfichas'));
+}
 
 
 
