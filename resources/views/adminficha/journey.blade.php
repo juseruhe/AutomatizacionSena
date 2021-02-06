@@ -5,7 +5,7 @@
 <div class="columns">
 
 <div class="column is-full">
-    <h2 class="is-size-3 has-text-centered"> Fichas </h2>
+    <h2 class="is-size-3 has-text-centered"> Filtro por Jornadas</h2>
 </div>
 </div>
 
@@ -17,7 +17,7 @@
 
     <tr class="has-text-weight-semibold is-size-5 mt-4 has-background-link has-text-white " >
 
-        <td>ID</td>
+        <td>N°</td>
         <td>Jornada</td>
         <td>Caracter</td>
         <td>Estado</td>
@@ -30,7 +30,7 @@
         @foreach($adminfichas as $adminficha)
             <td class="">{{$adminficha->id}}</td>
             <td class="">{{$adminficha->jornada}}</td>
-            <td class="">{{$adminficha->caracter}}</td>
+            <td class="">{{$adminficha->id_ficha_de_caracterizacion}}</td>
             <td class="">{{$adminficha->estado}}</td>
 
             
