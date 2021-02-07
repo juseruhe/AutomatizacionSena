@@ -27,9 +27,9 @@ Route::get('ficha/jornada',[FichaController::class,'jornada'])->name('ficha.jorn
 Route::get('fichas/programs',[FichaController::class,'programs'])->name('ficha.programs');
 Route::get('fichas/activados',[FichaController::class,'activados'])->name('ficha.activados');
 
-
-
 // ruta adminprograma
 Route::get('adminprogram',[AdminprogramController::class,'index'])->name('adminprogram.index');
 Route::get('adminprogram/create',[AdminprogramController::class,'create'])->name('adminprogram.create');
-//Route::get('adminprogram',[AdminprogramController::class,'store'])->name('adminprogram.store');
+Route::post('adminprogram',[AdminprogramController::class,'store'])->name('adminprogram.store');
+Route::get('adminprogram/edit/{id}',[AdminprogramController::class,'edit'])->name('adminprogram.edit');
+Route::put('adminprogram/{id}',[AdminprogramController::class,'update'])->name('adminprogram.update');

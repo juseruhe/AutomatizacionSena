@@ -1,12 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Ficha;
 use App\Models\Jornada;
-    use App\Models\Programa;
+use App\Models\Programa;
 use App\Models\Estado;
 
 
@@ -42,8 +41,6 @@ class AdminfichaController extends Controller
         ->where('id', '=', $id)
         ->get();
         return view('adminficha.edit', compact('adminfichas','jornadas'))->with(compact('programas'));
-
-
     }
 
     //Actualizar una ficha
@@ -54,9 +51,6 @@ class AdminfichaController extends Controller
             'type'=>'warning'
         ]);
     }
-
-
-
 
     public function deactivate($id){
 

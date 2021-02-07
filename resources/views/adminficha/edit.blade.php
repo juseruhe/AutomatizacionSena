@@ -5,13 +5,13 @@
 
 
 @foreach($adminfichas as $adminficha)
-<form action="{{route('adminficha.update',$adminficha->id)}}" method="post">
+<form action="{{route('adminficha.update',$adminficha->id)}}" method="post" class="has-text-centered mb-4 mt-3>
 
 @csrf
 @method('PUT')
 
 <h2 class="is-size-2 has-text-centered"> Actualizar una Ficha</h2>
-<table>
+<table class="table is-fullwidth">
     <tr>
         <td>
             <label  class="label is-size-4 has-text-centered" for="jornada"> Jornada: </label>

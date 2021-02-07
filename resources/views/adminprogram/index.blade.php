@@ -9,8 +9,7 @@
 
     <div class="columns">
         <div class="column is-full" align="center">
-            <a class="button has-background-info has-text-white" href="#">Crear programa</a>
-            <a class="button has-background-info has-text-white" href="#">Actualizar datos de programa</a>
+            <a class="button has-background-info has-text-white" href="{{route('adminprogram.create')}}">Crear programa</a>
         </div>
     </div>
 
@@ -34,30 +33,18 @@
                     <td class="">{{$adminprogram->siglas}}</td>
                     <td class="">
 
-
                         <form action="{{route('welcome')}}" method="post">
-
                             @csrf
-
                             @method('DELETE')
-
-                            <a href="{{route('adminficha.edit',$adminprogram->id)}}" class="button is-info">Actualizar</a>
+                            <a href="{{route('adminprogram.edit',$adminprogram->id)}}" class="button is-info">Actualizar</a>
 {{--                            <a href="{{route('adminficha.deactivate',$adminprogram->id)}}" class="button is-warning">Eliminar</a>--}}
 {{--                            <a href="{{route('adminficha.deactivate',$adminprogram->id)}}" class="button is-warning">Activar / Desactivar</a>--}}
                             {{--                                <button class="button is-danger">Eliminar</button>--}}
                         </form>
                     </td>
             </tr>
-
             @endforeach
-
-
-
-
-
-
         </table>
-
     </div>
 @endsection
 

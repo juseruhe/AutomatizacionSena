@@ -4,7 +4,7 @@
 
      <form action="{{route('adminficha.store')}}" method="post" class="has-text-centered mb-4 mt-3 ">
          @csrf
-         <table>
+         <table class="table is-fullwidth">
              <tr>
          <h2 class="is-size-2 has-text-centered"> Registrar una ficha</h2>
 
@@ -12,13 +12,13 @@
             <div class="field">
                 <label for="jornada" class="label is-size-3 "> Jornada</label>
                 <div class="control">
-                
+
                 <select name="jornada_id" class="select" >
                 @foreach($jornadas as $jornada)
                 <option value="{{$jornada->id}}">{{$jornada->nombre}}</option>
                 @endforeach
                 </select>
-               
+
                 </div>
                 </div>
          </td>
@@ -28,13 +28,13 @@
                  <label for="nombre" class="label is-size-3 "> Programa</label>
                  <div class="control">
                      <select name="programa_id" class="select" >
-                     
+
                    @foreach($programas as $programa)
-    
+
                   <option value="{{$programa->id}}"> {{$programa->nombre}}</option>
 
                    @endforeach
-                     
+
                      </select>
                  </div>
              </div>

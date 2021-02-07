@@ -23,11 +23,8 @@
     <div style="position: relative;right: -50px" class="columns">
 
         <table class="table  is-bordered has-text-centered column is-full ml-6 mb-4 ">
-
             <tr class="has-text-weight-semibold is-size-5 mt-4 has-background-link has-text-white " >
-
             </tr>
-
             <tr class="">
         </table>
 
