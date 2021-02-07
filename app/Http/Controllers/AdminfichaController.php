@@ -116,7 +116,7 @@ public function program(){
 
 public function activado(){
 
-   $adminfichas = Ficha::select('*')->where('estado_id', '=', 1)->get();
+   $adminfichas = Ficha::select('*')->orderBy('estado_id', 'asc')->get();
 
    return view('adminficha.activado',compact('adminfichas'));
 

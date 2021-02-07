@@ -5,7 +5,7 @@
 <div class="columns">
 
 <div class="column is-full">
-    <h2 class="is-size-3 has-text-centered"> Filtro por Jornadas</h2>
+    <h2 class="is-size-3 has-text-centered"> Filtro por Fichas Activadas/Desactivadas</h2>
 </div>
 </div>
 
@@ -18,10 +18,11 @@
     <tr class="has-text-weight-semibold is-size-5 mt-4 has-background-link has-text-white " >
 
         <td>N°</td>
+        <td>Estado</td>
         <td>Siglas</td>
         <td>Jornada</td>
         <td>Ficha</td>
-        <td>Estado</td>
+        
        
 
     </tr>
@@ -30,10 +31,11 @@
     <tr class="">
         @foreach($adminfichas as $adminficha)
             <td class="">{{$adminficha->id}}</td>
+            <td class="">{{$adminficha->estado->nombre}}</td>
             <td class="">{{$adminficha->programa->siglas}}</td>
             <td class="">{{$adminficha->jornada->nombre}}</td>
             <td>{{$adminficha->ficha_caracterizacion}}</td>
-            <td class="">{{$adminficha->estado->nombre}}</td>
+            
 
             
     </tr>
