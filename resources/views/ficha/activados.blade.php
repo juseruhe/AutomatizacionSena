@@ -3,7 +3,7 @@
         <div class="columns">
 
             <div class="column is-full">
-                <h2 class="is-size-3 has-text-centered"> Filtro por Jornadas </h2>
+                <h2 class="is-size-3 has-text-centered"> Filtro por Estados Activado/Desactivado</h2>
             </div>
         </div>
 
@@ -25,9 +25,7 @@
         <div class="columns">
 
 
-
         </div>
-
 
         <div style="position: relative;right: -50px" class="columns">
 
@@ -36,22 +34,24 @@
                 <tr class="has-text-weight-semibold is-size-5 mt-4 has-background-link has-text-white " >
 
                     <td>ID</td>
+                    <td>Estado</td>
+                    <td>Programa de formación</td>
                     <td>Jornada</td>
                     <td>Modalidad</td>
                     <td>Ficha de caracterización</td>
-                    <td>Programa de formación</td>
-                    <td>Estado</td>
                     <td>Opciones</td>
                 </tr>
 
                 <tr class="">
                     @foreach($adminfichas as $adminficha)
                         <td class="">{{$adminficha->id}}</td>
+                        <td class="">{{$adminficha->estado->nombre}}</td>
+                        <td class="">{{$adminficha->programa->nombre}}</td>
                         <td class="">{{$adminficha->jornada->nombre}}</td>
                         <td class="">{{$adminficha->jornada->modalidad->nombre}}</td>
                         <td class="">{{$adminficha->ficha_caracterizacion}}</td>
-                        <td class="">{{$adminficha->programa->nombre}}</td>
-                        <td class="">{{$adminficha->estado->nombre}}</td>
+                       
+                        
 
                         <td class="">
 
@@ -63,8 +63,7 @@
                                 @method('DELETE')
 
                                 <a href="{{route('adminficha.edit',$adminficha->id)}}" class="button is-info">Actualizar</a>
-                                <a href="{{route('adminficha.deactivate',$adminficha->id)}}" class="button is-warning">Activar / Desactivar</a>
-{{--                                <button class="button is-danger">Eliminar</button>--}}
+                                <a href="{{route('adminficha.deactivate',$adminficha->id)}}" class="button is-warning">Activar / Desactivar</a>                       
                             </form>
                         </td>
                 </tr>

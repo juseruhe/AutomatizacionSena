@@ -9,6 +9,22 @@
 </div>
 </div>
 
+<form action="{{route('ficha.activados')}}" method="get">
+
+<label for="estados">estados</label>
+
+<select name="estado_id" >
+@foreach($estados as $estado)
+
+<option value="{{$estado->id}}">{{$estado->nombre}}</option>
+@endforeach
+
+</select>
+
+<input class="button has-background-success" type="submit" value="Filtrar">
+
+</form>
+
 
 
 <div style="position: relative;right: -400px" class="columns">

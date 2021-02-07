@@ -5,9 +5,25 @@
 <div class="columns">
 
 <div class="column is-full">
-    <h2 class="is-size-3 has-text-centered"> Filtro por Jornadas</h2>
+    <h2 class="is-size-3 has-text-centered"> Filtro por Programas</h2>
 </div>
 </div>
+
+<form action="{{route('ficha.programs')}}" class="mb-4" method="get">
+
+<label for="programs">programas</label>
+
+<select name="programa_id" >
+@foreach($programas as $program)
+
+<option value="{{$program->id}}">{{$program->nombre}}</option>
+@endforeach
+
+</select>
+
+<input class="button has-background-success" type="submit" value="Filtrar">
+
+</form>
 
 
 
