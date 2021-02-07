@@ -8,16 +8,14 @@
 
 <body class="is-family-primary">
 
-
 @include('layouts.components.navbar')
 
 <div class="columns">
 <div class="column is-full">
-<h1 class="is-size-2 has-text-centered mb-4 mt-4 has-text-weight-bold"> Automatización</h1>
+<h1 class="is-size-2 has-text-centered mb-4 mt-4 has-text-weight-bold"><a href="{{route('welcome')}}">
+   Automatización - Inicio</a></h1>
 </div>
 </div>
-
-
 
 <div>
 @yield('content')
