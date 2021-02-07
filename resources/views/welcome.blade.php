@@ -15,15 +15,9 @@
         <div class="column is-full" align="center">
             <a class="button has-background-info has-text-white" href="{{route('adminficha.index')}}">Seccion ficha</a>
             <a class="button has-background-info has-text-white" href="{{route('adminprogram.index')}}">Seccion ficha</a>
-
-{{--            <a class="button has-background-info has-text-white" href="{{route('adminprogram.index')}}">Seccion programas</a>--}}
-
-{{--            <a class="button has-background-info has-text-white" href="{{route('adminficha.program')}}">Filtrar Programa</a>--}}
-
-{{--            <a class="button has-background-info has-text-white" href="{{route('adminficha.activado')}}">Filtrar Fichas Activadas/Desactivadas</a>--}}
-
+            <a class="button has-background-info has-text-white" href="#">Seccion aprendiz</a>
+            <a class="button has-background-info has-text-white" href="#">Seccion instructores</a>
         </div>
-
     </div>
 
     <div style="position: relative;right: -50px" class="columns">
