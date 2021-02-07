@@ -15,5 +15,5 @@ Route::put('adminficha/{id}',[AdminfichaController::class,'update'])->name('admi
 Route::get('adminficha/deactivate/{id}',[AdminfichaController::class,'deactivate'])->name('adminficha.deactivate');
 Route::put('adminficha/deactivated/{id}',[AdminfichaController::class,'deactivated'])->name('adminficha.deactivated');
 Route::get('adminficha/journey',[AdminfichaController::class,'show'])->name('adminficha.journey');
-Route::get('adminficha/character',[AdminfichaController::class,'character'])->name('adminficha.character');
+Route::get('adminficha/filtro/jornada',[AdminfichaController::class,'program'])->name('adminficha.program');
 

@@ -106,11 +106,11 @@ public function show(){
 }
 
 
-public function character(){
+public function program(){
 
-    $adminfichas = Ficha::select('*')->orderBy('id')->get();
+    $adminfichas = Ficha::select('*')->orderBy('programa_id', 'asc')->get();
 
-    return view('adminficha.character',compact('adminfichas'));
+    return view('adminficha.program',compact('adminfichas'));
 
 }
 

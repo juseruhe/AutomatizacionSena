@@ -30,7 +30,7 @@
     <tr class="">
         @foreach($adminfichas as $adminficha)
             <td class="">{{$adminficha->id}}</td>
-            <td class="">{{$adminficha->programa_id}}</td>
+            <td class="">{{$adminficha->programa->siglas}}</td>
             <td class="">{{$adminficha->jornada->nombre}}</td>
             <td>{{$adminficha->ficha_caracterizacion}}</td>
             <td class="">{{$adminficha->estado->nombre}}</td>
