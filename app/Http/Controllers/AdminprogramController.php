@@ -23,7 +23,7 @@ public function index(){
         $jornadas = Jornada::all();
         $programas = Programa::all();
         $estados = Estado::all();
-        return view ( 'adminprogram.create', compact('jornadas','programas'))->with(compact('estados'));
+        return view ( 'adminprogram.create', compact('nombre','codigo_programa'))->with(compact('siglas'));
     }
 
 // registrar un programa

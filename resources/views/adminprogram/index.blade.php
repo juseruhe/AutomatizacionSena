@@ -35,15 +35,15 @@
                     <td class="">
 
 
-                        <form action="#" method="post">
+                        <form action="{{route('welcome')}}" method="post">
 
                             @csrf
 
                             @method('DELETE')
 
                             <a href="{{route('adminficha.edit',$adminprogram->id)}}" class="button is-info">Actualizar</a>
-                            <a href="{{route('adminficha.deactivate',$adminprogram->id)}}" class="button is-warning">Eliminar</a>
-                            <a href="{{route('adminficha.deactivate',$adminprogram->id)}}" class="button is-warning">Activar / Desactivar</a>
+{{--                            <a href="{{route('adminficha.deactivate',$adminprogram->id)}}" class="button is-warning">Eliminar</a>--}}
+{{--                            <a href="{{route('adminficha.deactivate',$adminprogram->id)}}" class="button is-warning">Activar / Desactivar</a>--}}
                             {{--                                <button class="button is-danger">Eliminar</button>--}}
                         </form>
                     </td>

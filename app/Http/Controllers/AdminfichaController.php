@@ -49,7 +49,7 @@ class AdminfichaController extends Controller
     //Actualizar una ficha
     public function update(Request $request, $id){
         $adminfichas=Ficha::find($id)->update($request->all());
-        return redirect()->route('adminficha.index')->with([
+        return redirect()->route('welcome')->with([
             'message'=>'Se ha actualizado correctamente la ficha',
             'type'=>'warning'
         ]);

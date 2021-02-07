@@ -25,7 +25,7 @@
 
         <td>
             <label  class="label is-size-4 has-text-centered" for="nombre"> Programa: </label>
-            <select name="programa_id" class="select"> 
+            <select name="programa_id" class="select">
             <option type="text" value="{{$adminficha->programa_id}}"> {{$adminficha->programa->nombre}} </option>
             @foreach($programas as $programa)
             <option value="{{$programa->id}}">{{$programa->nombre}}</option>
@@ -47,15 +47,5 @@
     <input type="submit" class="button is-warning mb-4 mt-4" value="Actualizar Ficha">
 
 </form>
-
-
-
-
-
-
 @endforeach
-
-
-
-
 @endsection

@@ -3,9 +3,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminfichaController;
 use App\Http\Controllers\AdminprogramController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/home', function () {return view('welcome');})->name('welcome');
+
 // rutas adminficha
 Route::get('adminficha',[AdminfichaController::class,'index'])->name('adminficha.index');
 Route::get('adminficha/create',[AdminfichaController::class,'create'])->name('adminficha.create');
@@ -22,4 +21,4 @@ Route::get('adminficha/filtro/activado',[AdminfichaController::class,'activado']
 // ruta adminprograma
 Route::get('adminprogram',[AdminprogramController::class,'index'])->name('adminprogram.index');
 Route::get('adminprogram/create',[AdminprogramController::class,'create'])->name('adminprogram.create');
-Route::get('adminprogram',[AdminprogramController::class,'store'])->name('adminprogram.store');
+//Route::get('adminprogram',[AdminprogramController::class,'store'])->name('adminprogram.store');
