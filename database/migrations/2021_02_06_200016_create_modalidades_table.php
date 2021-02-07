@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFichasTable extends Migration
+class CreateModalidadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateFichasTable extends Migration
      */
     public function up()
     {
-        Schema::create('fichas', function (Blueprint $table) {
+        Schema::create('modalidades', function (Blueprint $table) {
             $table->id();
-            $table->String('jornada');
-            $table->String('nombre');
-            $table->String('id_ficha_de_caracterizacion');
-            $table->String('programa_de_formacion');
-            $table->String('estado');
+            $table->string('nombre');
             $table->timestamps();
-
         });
     }
 
@@ -32,6 +27,6 @@ class CreateFichasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fichas');
+        Schema::dropIfExists('modalidades');
     }
 }

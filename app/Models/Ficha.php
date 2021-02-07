@@ -5,6 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\Jornada;
+
+use App\Models\Programa;
+
+use App\Models\Estado;
+
 class Ficha extends Model
 {
     use HasFactory;
@@ -12,7 +18,23 @@ class Ficha extends Model
     protected $primaryKey = 'id';
     protected $table = 'fichas';
     protected $fillable = [
-        'jornada','nombre','id_ficha_de_caracterizacion','programa_de_formacion','estado'
+    'ficha_caracterizacion','programa_id','jornada_id','estado_id'
     ];
 
+
+    public function jornada(){
+
+        return $this->belongsTo(Jornada::class,'jornada_id');
+        
+        }
+
+        public function programa(){
+            return $this->belongsTo(Programa::class,'programa_id');
+        }
+
+        public function estado(){
+
+            return $this->belongsTo(Estado::class,'estado_id');
+        }
+    
 }

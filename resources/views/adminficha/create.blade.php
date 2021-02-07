@@ -12,39 +12,50 @@
             <div class="field">
                 <label for="jornada" class="label is-size-3 "> Jornada</label>
                 <div class="control">
-                <input type="text" class="input is-success " name="jornada" placeholder="Tipo de jornada">
+                
+                <select name="jornada_id" class="select" >
+                @foreach($jornadas as $jornada)
+                <option value="{{$jornada->id}}">{{$jornada->nombre}}</option>
+                @endforeach
+                </select>
+               
                 </div>
                 </div>
          </td>
 
          <td>
              <div class="field">
-                 <label for="nombre" class="label is-size-3 "> Nombre</label>
+                 <label for="nombre" class="label is-size-3 "> Programa</label>
                  <div class="control">
-                     <input type="text" class="input is-success " name="nombre" placeholder="Nombre de programa">
+                     <select name="programa_id" class="select" >
+                     
+                   @foreach($programas as $programa)
+    
+                  <option value="{{$programa->id}}"> {{$programa->nombre}}</option>
+
+                   @endforeach
+                     
+                     </select>
                  </div>
              </div>
          </td>
 
            <td>
-             <label for="id_ficha_de_caracterizacion" class="label is-size-3 "> Id ficha</label>
+             <label for="id_ficha_de_caracterizacion" class="label is-size-3 "> Ficha: </label>
              <div class="control">
-             <input type="text" class="input is-success " name="id_ficha_de_caracterizacion" placeholder="Identificador de caracter">
+             <input type="text" class="input is-success " name="ficha_caracterizacion" placeholder="Identificador de caracter">
              </div>
            </td>
 
-           <td>
-               <label for="programa_de_formacion" class="label is-size-3 "> Programa</label>
-               <div class="control">
-                   <input type="text" class="input is-success " name="programa_de_formacion" placeholder="Programa de formacion">
-               </div>
-               </div>
-           </td>
 
           <td>
              <label for="Estado" class="label is-size-3 "> Estado</label>
              <div class="control">
-             <input type="text" class="input is-success " name="estado" placeholder="Estado del aprendiz">
+             <select name="estado_id" class="select">
+             @foreach($estados as $estado)
+              <option value="{{$estado->id}}">{{$estado->nombre}}</option>
+             @endforeach
+             </select>
              </div>
              </div>
           </td>

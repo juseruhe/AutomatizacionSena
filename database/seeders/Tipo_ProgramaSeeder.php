@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 
 
-class FichaSeeder extends Seeder
+class Tipo_ProgramaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,11 +18,15 @@ class FichaSeeder extends Seeder
     {
         //
 
-        DB::table('fichas')->insert([
-            'ficha_caracterizacion' => '1803183',
-            'programa_id' => '1',
-            'jornada_id' => 5,
-            'estado_id' => 1
+        DB::table('tipos_programa')->insert([
+            'nombre' => 'Técnico'
         ]);
+
+        DB::table('tipos_programa')->insert([
+            'nombre' => 'Tecnologo'
+        ]);
+
+    
+
     }
 }

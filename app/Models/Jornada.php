@@ -7,19 +7,28 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Ficha;
 
-class Programa extends Model
+use App\Models\Modalidad;
+
+class Jornada extends Model
 {
     use HasFactory;
 
     protected $primaryKey = 'id';
-    protected $table = 'programas';
+    protected $table = 'jornadas';
     protected $fillable = [
-        'nombre','siglas','tipo_programa_id'
+        'nombre','modalidad_id'
     ];
 
 
     public function fichas(){
 
-        return $this->hasMany(Ficha::class,'id');
+       return  $this->hasMany(Ficha::class,'id');
+    }
+
+    public function modalidad(){
+
+      return  $this->belongsTo(Modalidad::class,'modalidad_id');
+
     }
 }
+

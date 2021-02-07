@@ -5,21 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\Ficha;
+use App\Models\Jornada;
 
-class Programa extends Model
+class Modalidad extends Model
 {
     use HasFactory;
 
     protected $primaryKey = 'id';
-    protected $table = 'programas';
+    protected $table = 'modalidades';
     protected $fillable = [
-        'nombre','siglas','tipo_programa_id'
+        'nombre'
     ];
 
+    public function jornadas(){
 
-    public function fichas(){
-
-        return $this->hasMany(Ficha::class,'id');
+        return $this->hasMany(Jornada::class,'id');
     }
 }

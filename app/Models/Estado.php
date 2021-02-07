@@ -7,19 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Ficha;
 
-class Programa extends Model
+class Estado extends Model
 {
     use HasFactory;
 
     protected $primaryKey = 'id';
-    protected $table = 'programas';
+    protected $table = 'estados';
     protected $fillable = [
-        'nombre','siglas','tipo_programa_id'
+        'nombre'
     ];
 
 
     public function fichas(){
-
         return $this->hasMany(Ficha::class,'id');
     }
+
+
+
 }

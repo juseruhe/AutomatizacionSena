@@ -26,8 +26,8 @@
 
                     <td>ID</td>
                     <td>Jornada</td>
-                    <td>Nombre</td>
-                    <td>Id ficha de caracterización</td>
+                    <td>Modalidad</td>
+                    <td>Ficha de caracterización</td>
                     <td>Programa de formación</td>
                     <td>Estado</td>
                     <td>Opciones</td>
@@ -36,11 +36,11 @@
                 <tr class="">
                     @foreach($adminfichas as $adminficha)
                         <td class="">{{$adminficha->id}}</td>
-                        <td class="">{{$adminficha->jornada}}</td>
-                        <td class="">{{$adminficha->nombre}}</td>
-                        <td class="">{{$adminficha->id_ficha_de_caracterizacion}}</td>
-                        <td class="">{{$adminficha->programa_de_formacion}}</td>
-                        <td class="">{{$adminficha->estado}}</td>
+                        <td class="">{{$adminficha->jornada->nombre}}</td>
+                        <td class="">{{$adminficha->jornada->modalidad->nombre}}</td>
+                        <td class="">{{$adminficha->ficha_caracterizacion}}</td>
+                        <td class="">{{$adminficha->programa->nombre}}</td>
+                        <td class="">{{$adminficha->estado->nombre}}</td>
 
                         <td class="">
 

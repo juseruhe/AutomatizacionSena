@@ -6,6 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Ficha;
 
+use App\Models\Jornada;
+
+use App\Models\Programa;
+
+use App\Models\Estado;
+
+
 class AdminfichaController extends Controller
 {
     //
@@ -16,7 +23,15 @@ class AdminfichaController extends Controller
     }
 
     public function create(){
-        return view ( 'adminficha.create');
+
+        $jornadas = Jornada::all();
+
+        $programas = Programa::all();
+
+        $estados = Estado::all();
+
+
+        return view ( 'adminficha.create', compact('jornadas','programas'))->with(compact('estados'));
     }
 
 // registrar nueva ficha
@@ -32,18 +47,26 @@ class AdminfichaController extends Controller
 
     public function edit($id){
 
-        $adminfichas = ficha::find($id)
+        $jornadas = Jornada::all();
+
+        $programas = Programa::all();
+
+
+
+        $adminfichas = Ficha::find($id)
         ->where('id', '=', $id)
         ->get();
+
+
     
-        return view('adminficha.edit', compact('adminfichas'));
+        return view('adminficha.edit', compact('adminfichas','jornadas'))->with(compact('programas'));
 
 
     }
 
     //Actualizar una ficha
     public function update(Request $request, $id){
-        $adminfichas=ficha::find($id)->update($request->all());
+        $adminfichas=Ficha::find($id)->update($request->all());
         return redirect()->route('adminficha.index')->with([
             'message'=>'Se ha actualizado correctamente la ficha',
             'type'=>'warning'
@@ -54,30 +77,42 @@ class AdminfichaController extends Controller
 
 
     public function deactivate($id){
-        
-        $adminfichas = ficha::find($id)
+
+        $estados = Estado::all();
+
+        $adminfichas = Ficha::find($id)
         ->where('id', '=', $id)
         ->get();
     
-        return view('adminficha.deactivate', compact('adminfichas'));
+        return view('adminficha.deactivate', compact('adminfichas', 'estados'));
 
     }
 
     public function deactivated(Request $request, $id){
-        $adminfichas=ficha::find($id)->update($request->all());
+        $adminfichas=Ficha::find($id)->update($request->all());
         return redirect()->route('adminficha.index')->with([
             'message'=>'Se ha cambiado el estado de la ficha',
             'type'=>'warning'
         ]);
     }
 
+    
+
 public function show(){
 
-    $adminfichas = ficha::select('*')->orderBy('jornada', 'asc')->get();
+    $adminfichas = Ficha::select('*')->orderBy('jornada_id', 'asc')->get();
 
     return view('adminficha.journey',compact('adminfichas'));
 }
 
+
+public function character(){
+
+    $adminfichas = Ficha::select('*')->orderBy('id')->get();
+
+    return view('adminficha.character',compact('adminfichas'));
+
+}
 
 
 

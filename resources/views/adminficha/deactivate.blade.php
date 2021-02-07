@@ -10,13 +10,13 @@
 <h2 class="is-size-2 has-text-centered"> Estado de una Ficha</h2>
 
 
-<p class="has-text-centered has-text-success is-size-3">{{$adminficha->estado}}</p>
+<p class="has-text-centered has-text-success is-size-3">{{$adminficha->estado->nombre}}</p>
 
 
-   <input type="checkbox" name="estado" value="activado">Activado</br>
-    <input type="checkbox" name="estado" value="desactivado">Desactivado</br>
+@foreach($estados as $estado)
+   <input type="checkbox" name="estado_id" value="{{$estado->id}}">{{$estado->nombre}}</br>
     
-
+@endforeach
 
 
 

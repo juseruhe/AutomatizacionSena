@@ -15,27 +15,32 @@
     <tr>
         <td>
             <label  class="label is-size-4 has-text-centered" for="jornada"> Jornada: </label>
-            <input type="text" class="input" name="jornada" value="{{$adminficha->jornada}}">
+            <select name="jornada_id" class="select">
+            <option type="text" value="{{$adminficha->jornada_id}}"> {{$adminficha->jornada->nombre}} </option>
+            @foreach($jornadas as $jornada)
+            <option value="{{$jornada->id}}">{{$jornada->nombre}}</option>
+            @endforeach
+            </select>
         </td>
 
         <td>
-            <label  class="label is-size-4 has-text-centered" for="nombre"> Nombre: </label>
-            <input type="text" class="input" name="nombre" value="{{$adminficha->nombre}}">
+            <label  class="label is-size-4 has-text-centered" for="nombre"> Programa: </label>
+            <select name="programa_id" class="select"> 
+            <option type="text" value="{{$adminficha->programa_id}}"> {{$adminficha->programa->nombre}} </option>
+            @foreach($programas as $programa)
+            <option value="{{$programa->id}}">{{$programa->nombre}}</option>
+            @endforeach
+            </select>
         </td>
 
         <td>
-            <label  class="label is-size-4 has-text-centered" for="id_ficha_de_caracterizacion"> Id de ficha: </label>
-            <input type="text" class="input" name="id_ficha_de_caracterizacion" value="{{$adminficha->id_ficha_de_caracterizacion}}" placeholder="ficha">
-        </td>
-
-        <td>
-            <label  class="label is-size-4 has-text-centered" for="programa_de_formacion"> Programa: </label>
-            <input type="text" class="input" name="programa_de_formacion" value="{{$adminficha->programa_de_formacion}}" placeholder="programa">
+            <label  class="label is-size-4 has-text-centered" for="id_ficha_de_caracterizacion"> Ficha: </label>
+            <input type="text" class="input" name="ficha_caracterizacion" value="{{$adminficha->ficha_caracterizacion}}" placeholder="ficha">
         </td>
 
         <td>
             <label  class="label is-size-4 has-text-centered" for="estado"> Estado: </label>
-            <p type="text" class="has-text-centered has-text-dark is-size-50" name="estado">{{$adminficha->estado}}</p>
+            <p type="text" class="has-text-centered has-text-dark is-size-50" name="estado">{{$adminficha->estado->nombre}}</p>
         </td>
     </tr>
 </table>
