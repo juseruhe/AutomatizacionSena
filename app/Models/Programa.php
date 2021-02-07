@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Ficha;
+use App\Models\Jornada;
+use App\Models\Estado;
 
 class Programa extends Model
 {
@@ -14,7 +16,7 @@ class Programa extends Model
     protected $primaryKey = 'id';
     protected $table = 'programas';
     protected $fillable = [
-        'nombre','siglas','tipo_programa_id'
+        'nombre','siglas','codigo_programa','tipo_programa_id'
     ];
 
 

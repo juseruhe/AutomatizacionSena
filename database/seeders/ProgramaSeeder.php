@@ -18,6 +18,7 @@ class ProgramaSeeder extends Seeder
     {
         DB::table('programas')->insert([
             'nombre' => 'Análisis y Desarrollo de Sistemas de Información',
+            'codigo_programa'=>'14',
             'siglas' => 'ADSI',
             'tipo_programa_id' => 2
 
@@ -26,6 +27,7 @@ class ProgramaSeeder extends Seeder
 
         DB::table('programas')->insert([
             'nombre' => 'Sistemas',
+            'codigo_programa'=>'54',
             'siglas' => 'TS',
             'tipo_programa_id' => 1
         ]);
@@ -33,6 +35,7 @@ class ProgramaSeeder extends Seeder
 
         DB::table('programas')->insert([
             'nombre' => 'Software',
+            'codigo_programa'=>'72',
             'siglas' => 'TSFT',
             'tipo_programa_id' => 1
         ]);

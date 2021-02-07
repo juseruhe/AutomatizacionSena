@@ -5,11 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Ficha;
-
 use App\Models\Jornada;
-
-use App\Models\Programa;
-
+    use App\Models\Programa;
 use App\Models\Estado;
 
 
@@ -23,14 +20,9 @@ class AdminfichaController extends Controller
     }
 
     public function create(){
-
         $jornadas = Jornada::all();
-
         $programas = Programa::all();
-
         $estados = Estado::all();
-
-
         return view ( 'adminficha.create', compact('jornadas','programas'))->with(compact('estados'));
     }
 
@@ -43,22 +35,12 @@ class AdminfichaController extends Controller
         ]);
     }
 
-
-
     public function edit($id){
-
         $jornadas = Jornada::all();
-
         $programas = Programa::all();
-
-
-
         $adminfichas = Ficha::find($id)
         ->where('id', '=', $id)
         ->get();
-
-
-    
         return view('adminficha.edit', compact('adminfichas','jornadas'))->with(compact('programas'));
 
 
@@ -83,7 +65,7 @@ class AdminfichaController extends Controller
         $adminfichas = Ficha::find($id)
         ->where('id', '=', $id)
         ->get();
-    
+
         return view('adminficha.deactivate', compact('adminfichas', 'estados'));
 
     }
@@ -96,7 +78,7 @@ class AdminfichaController extends Controller
         ]);
     }
 
-    
+
 
 public function show(){
 
