@@ -7,6 +7,9 @@
             </div>
         </div>
 
+        
+
+
         <div class="columns">
 
             <div class="column is-full" align="center">
@@ -23,6 +26,8 @@
         </div>
 
         <div class="columns">
+
+        
 
 
         </div>

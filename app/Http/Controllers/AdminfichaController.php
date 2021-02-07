@@ -94,7 +94,9 @@ public function program(){
 
     $adminfichas = Ficha::select('*')->orderBy('programa_id', 'asc')->get();
 
-    return view('adminficha.program',compact('adminfichas'));
+    $programas = Programa::all();
+
+    return view('adminficha.program',compact('adminfichas','programas'));
 
 }
 
@@ -102,20 +104,14 @@ public function activado(){
 
    $adminfichas = Ficha::select('*')->orderBy('estado_id', 'asc')->get();
 
-   return view('adminficha.activado',compact('adminfichas'));
+   $estados = Estado::all();
+
+   return view('adminficha.activado',compact('adminfichas','estados'));
 
 
 }
 
-public function  jornadas(Request $request){
-    $jornada = $request->get('jornada_id');
 
-    $adminfichas = Ficha::select('*')->where('jornada_id', '=', $jornada)->get();
-
-    return view('adminfichas.jornadas', compact('adminfichas'));
-
-
-}
 
 
 

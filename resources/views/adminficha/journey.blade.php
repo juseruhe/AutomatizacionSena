@@ -5,11 +5,11 @@
 <div class="columns">
 
 <div class="column is-full">
-    <h2 class="is-size-3 has-text-centered"> Filtro por Programas</h2>
+    <h2 class="is-size-3 has-text-centered"> Filtro por Jornadas</h2>
 </div>
 </div>
 
-<form action="{{route('adminficha.jornadas')}} method="get">
+<form action="{{route('ficha.jornada')}}" method="get">
 
 <label for="jornadas">Jornadas</label>
 
