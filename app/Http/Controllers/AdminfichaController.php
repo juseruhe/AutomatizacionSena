@@ -114,6 +114,15 @@ public function program(){
 
 }
 
+public function activado(){
+
+   $adminfichas = Ficha::select('*')->where('estado_id', '=', 1)->get();
+
+   return view('adminficha.activado',compact('adminfichas'));
+
+
+}
+
 
 
 }
