@@ -16,6 +16,7 @@ class CreateProgramasTable extends Migration
         Schema::create('programas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->string('codigo_programa');
             $table->string('siglas');
             $table->bigInteger('tipo_programa_id')->unsigned();
             $table->foreign('tipo_programa_id')->references('id')->on('tipos_programa');

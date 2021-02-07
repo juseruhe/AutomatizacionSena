@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Jornada;
-
 use App\Models\Programa;
-
 use App\Models\Estado;
 
 class Ficha extends Model
@@ -25,7 +23,7 @@ class Ficha extends Model
     public function jornada(){
 
         return $this->belongsTo(Jornada::class,'jornada_id');
-        
+
         }
 
         public function programa(){
@@ -36,5 +34,5 @@ class Ficha extends Model
 
             return $this->belongsTo(Estado::class,'estado_id');
         }
-    
+
 }
