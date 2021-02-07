@@ -14,7 +14,7 @@
 
         <div class="column is-full" align="center">
             <a class="button has-background-info has-text-white" href="{{route('adminficha.index')}}">Seccion ficha</a>
-            <a class="button has-background-info has-text-white" href="{{route('adminprogram.index')}}">Seccion ficha</a>
+            <a class="button has-background-info has-text-white" href="{{route('adminprogram.index')}}">Seccion programa</a>
             <a class="button has-background-info has-text-white" href="#">Seccion aprendiz</a>
             <a class="button has-background-info has-text-white" href="#">Seccion instructores</a>
         </div>
