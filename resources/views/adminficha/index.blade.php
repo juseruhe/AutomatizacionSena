@@ -11,13 +11,9 @@
 
             <div class="column is-full" align="center">
                 <a class="button has-background-info has-text-white" href="{{route('adminficha.create')}}">Crear ficha</a>
-
                 <a class="button has-background-info has-text-white" href="{{route('adminficha.journey')}}">Filtrar Jornada</a>
-
                 <a class="button has-background-info has-text-white" href="{{route('adminficha.program')}}">Filtrar Programa</a>
-
                 <a class="button has-background-info has-text-white" href="{{route('adminficha.activado')}}">Filtrar Fichas Activadas/Desactivadas</a>
-
             </div>
 
         </div>

@@ -10,11 +10,11 @@
     <div class="columns">
         <div class="column is-full" align="center">
             <a class="button has-background-info has-text-white" href="#">Crear programa</a>
-            <a class="button has-background-info has-text-white" href="#">Actualizar datos de programa Jornada</a>
+            <a class="button has-background-info has-text-white" href="#">Actualizar datos de programa</a>
         </div>
     </div>
 
-    <div style="position: relative;right: -50px" class="columns">
+    <div style="position: relative;right: -300px" class="columns">
 
         <table class="table  is-bordered has-text-centered column is-full ml-6 mb-4 ">
 
