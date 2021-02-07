@@ -84,7 +84,9 @@ public function show(){
 
     $adminfichas = Ficha::select('*')->orderBy('jornada_id', 'asc')->get();
 
-    return view('adminficha.journey',compact('adminfichas'));
+    $jornadas = Jornada::all();
+
+    return view('adminficha.journey',compact('adminfichas', 'jornadas'));
 }
 
 
@@ -101,6 +103,16 @@ public function activado(){
    $adminfichas = Ficha::select('*')->orderBy('estado_id', 'asc')->get();
 
    return view('adminficha.activado',compact('adminfichas'));
+
+
+}
+
+public function  jornadas(Request $request){
+    $jornada = $request->get('jornada_id');
+
+    $adminfichas = Ficha::select('*')->where('jornada_id', '=', $jornada)->get();
+
+    return view('adminfichas.jornadas', compact('adminfichas'));
 
 
 }

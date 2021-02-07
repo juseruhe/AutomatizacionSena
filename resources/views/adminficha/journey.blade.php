@@ -9,6 +9,23 @@
 </div>
 </div>
 
+<form action="{{route('adminficha.jornadas')}} method="get">
+
+<label for="jornadas">Jornadas</label>
+
+<select name="jornada_id" >
+@foreach($jornadas as $jornada)
+
+<option value="{{$jornada->id}}">{{$jornada->nombre}}</option>
+@endforeach
+
+</select>
+
+<input class="button has-background-success" type="submit" value="Filtrar">
+
+</form>
+
+
 
 
 <div style="position: relative;right: -400px" class="columns">
