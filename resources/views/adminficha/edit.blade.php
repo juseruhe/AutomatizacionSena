@@ -5,7 +5,7 @@
 
 
 @foreach($adminfichas as $adminficha)
-<form action="{{route('adminficha.update',$adminficha->id)}}" method="post" class="has-text-centered mb-4 mt-3>
+<form action="{{route('adminficha.update',$adminficha->id)}}" method="post" class="has-text-centered mb-4 mt-3">
 
 @csrf
 @method('PUT')

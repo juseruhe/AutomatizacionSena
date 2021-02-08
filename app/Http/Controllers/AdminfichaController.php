@@ -53,13 +53,10 @@ class AdminfichaController extends Controller
     }
 
     public function deactivate($id){
-
         $estados = Estado::all();
-
         $adminfichas = Ficha::find($id)
         ->where('id', '=', $id)
         ->get();
-
         return view('adminficha.deactivate', compact('adminfichas', 'estados'));
 
     }

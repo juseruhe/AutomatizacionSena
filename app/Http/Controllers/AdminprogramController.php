@@ -13,10 +13,10 @@ use App\Models\Tipo_Programa;
 class AdminprogramController extends Controller
 {
     //
-public function index(){
-    $adminprograms=Programa::all();
-    return view('adminprogram.index',compact('adminprograms'));
-}
+    public function index(){
+        $adminprograms=Programa::all();
+        return view('adminprogram.index',compact('adminprograms'));
+    }
 
     public function create(){
         $tipos_programas=Tipo_Programa::all();
@@ -24,13 +24,13 @@ public function index(){
     }
 
 // registrar un programa
-public function store(Request $request){
-    $adminprograms=Programa::create($request->all());
-    Return redirect()->route('adminprogram.index')->with([
+    public function store(Request $request){
+        $adminprograms=Programa::create($request->all());
+        Return redirect()->route('adminprogram.index')->with([
         'message'=>'Se ha creado correctamente el programa',
         'type'=>'success'
-    ]);
-}
+        ]);
+    }
 //actualizar datos de programa
     public function edit($id){
         $programas = Programa::find($id)
@@ -39,5 +39,13 @@ public function store(Request $request){
         return view('adminprogram.edit',compact('programas'));
     }
 
+    //Actualizar una ficha
+    public function update(Request $request, $id){
+        $programas=Ficha::find($id)->update($request->all());
+        return redirect()->route('adminprogram.index')->with([
+        'message'=>'Se ha actualizado correctamente la ficha',
+        'type'=>'warning'
+        ]);
+    }
 
 }
