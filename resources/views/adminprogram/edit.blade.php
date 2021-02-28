@@ -12,29 +12,29 @@
             <tr>
                 <td>
                     <label  class="label is-size-4 has-text-centered" for="nombre"> Nombre de programa </label>
-                    <input type="text">
+                    <input type="text" name="nombre" class="input" value="{{$programa->nombre}}">
 
-                        @endforeach
-                    </select>
                 </td>
 
-{{--                <td>--}}
-{{--                    <label  class="label is-size-4 has-text-centered" for="#"> Codigo del programa </label>--}}
-{{--                    <select name="" class="select">--}}
-{{--                        <option type="text" value="#"> # </option>--}}
+                    <td>
+                   <label  class="label is-size-4 has-text-centered" for="#"> Código </label>
+                   <input type="text" class="input" name="codigo_programa" value="{{$programa->codigo_programa}}" placeholder="#">
+               </td>       
+                
+               <td>
+                   <label  class="label is-size-4 has-text-centered" for="#"> Siglas </label>
+                   <input type="text" class="input" name="siglas" value="{{$programa->siglas}}" placeholder="#">
+               </td>
 
-{{--                            <option value="#">#</option>--}}
-{{--                        @endforeach--}}
-{{--                    </select>--}}
-{{--                </td>--}}
+              
 
-{{--                <td>--}}
-{{--                    <label  class="label is-size-4 has-text-centered" for="#"> Siglas </label>--}}
-{{--                    <input type="text" class="input" name="#" value="#" placeholder="#">--}}
-{{--                </td>--}}
+             
             </tr>
         </table>
-        <input type="submit" class="button is-warning mb-4 mt-4" value="Actualizar Ficha" style="margin:0px auto; display:block;>
+        <input type="submit" class="button is-warning mb-4 mt-4" value="Actualizar Ficha" style="margin:0px auto; display:block;">
      </form>
-{{--    @endforeach--}}
+
+
+     @endforeach
+
 @endsection

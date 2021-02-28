@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-
+use App\Models\Aprendiz;
 use Illuminate\Database\Seeder;
 
 use Database\Seeders\JornadaSeeder;
@@ -17,6 +17,8 @@ use Database\Seeders\ProgramaSeeder;
 use Database\Seeders\EstadoSeeder;
 
 use Database\Seeders\FichaSeeder;
+
+use Database\Seeders\AprendizSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -41,6 +43,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(FichaSeeder::class);
       
+        $this->call(AprendizSeeder::class);
 
 
 

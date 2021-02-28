@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Ficha;
 
+use App\Models\Aprendiz;
+
 class Estado extends Model
 {
     use HasFactory;
@@ -22,6 +24,10 @@ class Estado extends Model
         return $this->hasMany(Ficha::class,'id');
     }
 
+    public function aprendices(){
+
+        return $this->hasMany(Aprendiz::class,'id');
+    }
 
 
 }

@@ -41,7 +41,9 @@ class AdminprogramController extends Controller
 
     //Actualizar una ficha
     public function update(Request $request, $id){
-        $programas=Ficha::find($id)->update($request->all());
+      
+       Programa::find($id)->update($request->all());
+
         return redirect()->route('adminprogram.index')->with([
         'message'=>'Se ha actualizado correctamente la ficha',
         'type'=>'warning'
