@@ -11,6 +11,8 @@ class Aprendiz extends Model
 {
     use HasFactory;
 
+    //com
+
     protected $primaryKey = 'id';
     protected $table = 'aprendices';
     protected $fillable = [
