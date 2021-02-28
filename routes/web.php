@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminfichaController;
 use App\Http\Controllers\AdminprogramController;
 use App\Http\Controllers\FichaController;
 use App\Http\Controllers\AprendizController;
+use App\Http\Controllers\InstructorController;
 
 Route::get('/home', function () {return view('welcome');})->name('welcome');
 
@@ -42,3 +43,10 @@ Route::post('aprendiz',[AprendizController::class,'store'])->name('aprendiz.stor
 Route::get('aprendiz/edit/{id}',[AprendizController::class,'edit'])->name('aprendiz.edit');
 Route::put('aprendiz/{id}',[AprendizController::class,'update'])->name('aprendiz.update');
 Route::delete('aprendiz/{id}',[AprendizController::class,'destroy'])->name('aprendiz.destroy');
+
+// Instructor
+Route::get('instructor',[InstructorController::class,'index'])->name('instructor.index');
+Route::get('instructor/create',[InstructorController::class,'create'])->name('instructor.create');
+Route::post('instructor',[InstructorController::class,'store'])->name('instructor.store');
+Route::get('instructor/edit/{id}',[InstructorController::class,'edit'])->name('instructor.edit');
+Route::put('instructor/{id}',[InstructorController::class,'update'])->name('instructor.update');

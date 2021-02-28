@@ -9,6 +9,8 @@ use App\Models\Ficha;
 
 use App\Models\Aprendiz;
 
+use App\Models\Instructor;
+
 class Estado extends Model
 {
     use HasFactory;
@@ -27,6 +29,11 @@ class Estado extends Model
     public function aprendices(){
 
         return $this->hasMany(Aprendiz::class,'id');
+    }
+
+    public function instructores(){
+
+        return $this->hasMany(Instructor::class,'id');
     }
 
 

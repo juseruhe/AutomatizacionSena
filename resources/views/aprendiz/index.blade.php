@@ -3,7 +3,7 @@
     <div class="columns">
 
         <div class="column is-full">
-            <h2 class="is-size-3 has-text-centered"> Programas de formación </h2>
+            <h2 class="is-size-3 has-text-centered"> Aprendiz </h2>
         </div>
     </div>
 

@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <form action="{{route('instructor.store')}}" method="post" class="has-text-centered mb-4 mt-3 ">
+    <form action="{{route('instructor.store')}}" method="post" class="has-text-centered mb-4 mt-3 " enctype="multipart/form-data">
         @csrf
         <table class="table is-fullwidth">
             <tr>
-        <h2 class="is-size-2 has-text-centered"> Registrar un Aprendiz</h2>
+        <h2 class="is-size-2 has-text-centered"> Registrar un Instructor</h2>
 
         
            <div class="field">
@@ -72,7 +72,17 @@
                </select>
             </div>
 
-            <input class="button has-background-success my-4 has-text-white" type="submit" value="Registrar Aprendiz">
+            <div class="field">
+               <label for="jornada" class="label is-size-3 "> Foto</label>
+               <div class="control">
+            <input type="file" class="input is-success " name="foto" placeholder="">
+            </div>
+
+
+
+
+
+            <input class="button has-background-success my-4 has-text-white" type="submit" value="Registrar Instructor">
 
 
 
